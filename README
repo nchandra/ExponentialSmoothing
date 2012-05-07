@@ -1,0 +1,8 @@
+ExponentialSmoothing
+====================
+
+An implementation of Holt Winters triple exponential smoothing and other methods for Time Series Analysis.
+
+For details, see:
+http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc43.htm
+http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc435.htm
