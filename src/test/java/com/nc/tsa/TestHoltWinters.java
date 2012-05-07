@@ -12,7 +12,7 @@ public class TestHoltWinters {
          * NIST data available at:
          * http://www.itl.nist.gov/div898/handbook/pmc/section4/pmc436.htm
          */
-        int[] y = { 362, 385, 432, 341, 382, 409, 498, 387, 473, 513, 582, 474,
+        long[] y = { 362, 385, 432, 341, 382, 409, 498, 387, 473, 513, 582, 474,
                 544, 582, 681, 557, 628, 707, 773, 592, 627, 725, 854, 661 };
         int period = 4;
         int m = 4;

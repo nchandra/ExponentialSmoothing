@@ -61,7 +61,7 @@ public class HoltWinters {
      * @param debug - Print debug values. Useful for testing.
      *
      */
-    public static double[] forecast(int[] y, double alpha, double beta,
+    public static double[] forecast(long[] y, double alpha, double beta,
             double gamma, int period, int m, boolean debug) {
 
         validateArguments(y, alpha, beta, gamma, period, m);
@@ -91,7 +91,7 @@ public class HoltWinters {
         return forecast;
     }
 
-    public static double[] forecast(int[] y, double alpha, double beta,
+    public static double[] forecast(long[] y, double alpha, double beta,
             double gamma, int period, int m) {
         return forecast(y, alpha, beta, gamma, period, m, false);
     }
@@ -105,7 +105,7 @@ public class HoltWinters {
      * @param gamma
      * @param m
      */
-    private static void validateArguments(int[] y, double alpha, double beta,
+    private static void validateArguments(long[] y, double alpha, double beta,
             double gamma, int period, int m) {
         if (y == null) {
             throw new IllegalArgumentException("Value of y should be not null");
@@ -147,7 +147,7 @@ public class HoltWinters {
      * @param debug
      * @return - Forecast for m periods.
      */
-    private static double[] calculateHoltWinters(int[] y, double a0, double b0,
+    private static double[] calculateHoltWinters(long[] y, double a0, double b0,
             double alpha, double beta, double gamma,
             double[] initialSeasonalIndices, int period, int m, boolean debug) {
 
@@ -204,7 +204,7 @@ public class HoltWinters {
      *
      * @return - Initial Level value i.e. St[1]
      */
-    private static double calculateInitialLevel(int[] y) {
+    private static double calculateInitialLevel(long[] y) {
         return y[0];
     }
 
@@ -213,7 +213,7 @@ public class HoltWinters {
      *
      * @return - Initial trend - Bt[1]
      */
-    private static double calculateInitialTrend(int[] y, int period) {
+    private static double calculateInitialTrend(long[] y, int period) {
 
         double sum = 0;
 
@@ -229,7 +229,7 @@ public class HoltWinters {
      *
      * @return - Seasonal Indices.
      */
-    private static double[] calculateSeasonalIndices(int[] y, int period,
+    private static double[] calculateSeasonalIndices(long[] y, int period,
             int seasons) {
 
         double[] seasonalAverage = new double[seasons];
